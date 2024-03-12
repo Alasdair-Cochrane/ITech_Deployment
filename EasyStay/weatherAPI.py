@@ -2,7 +2,7 @@ import requests
 from EasyStay import mapAPI
 
 def get_weather(lat, long):
-    api_key = "3cfb43edb35caaca2d0bba48e86cf621"
+    api_key = "KEY"
     base_url = "http://api.openweathermap.org/data/2.5/weather"
 
     complete_url = f"{base_url}?lat={lat}&lon={long}&units=metric&appid={api_key}"
