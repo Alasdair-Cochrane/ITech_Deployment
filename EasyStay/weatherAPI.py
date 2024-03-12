@@ -1,8 +1,10 @@
 import requests
 from EasyStay import mapAPI
 
+
 def get_weather(city):
     api_key = "3cfb43edb35caaca2d0bba48e86cf621"
+
     base_url = "http://api.openweathermap.org/data/2.5/weather"
 
     #first gets the coords from the geocoding api
@@ -26,6 +28,7 @@ def get_weather(city):
     return description
 
 
+
 def get_coords(city):
     api_key = "3cfb43edb35caaca2d0bba48e86cf621"
     qUrl = f"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit={1}&appid={api_key}"
@@ -36,4 +39,6 @@ def get_coords(city):
     coordsDict['lat'] = coords[0]['lat']
     coordsDict['lng'] = coords[0]['lon']
     return coordsDict
+
+
 
